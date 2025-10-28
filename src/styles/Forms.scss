@@ -1,0 +1,49 @@
+// Cabeçalho da página de formulário
+.form-page-header {
+  margin-bottom: 2rem;
+  h1 {
+    color: var(--foreground);
+    font-size: 1.875rem; // 30px
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  p {
+    color: var(--muted-foreground);
+    font-size: 1rem;
+  }
+}
+
+// Container do formulário
+.form-container {
+  background-color: var(--background-secondary);
+  padding: 2rem 2.5rem;
+  border-radius: 0.75rem; // 12px
+  border: 1px solid var(--border);
+}
+
+// Grid responsivo para os campos
+.form-grid {
+  display: grid;
+  // Cria colunas responsivas
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0 2rem; // 0 gap vertical, 2rem horizontal
+}
+
+// Para campos que devem ocupar a largura total
+.form-span-all {
+  grid-column: 1 / -1;
+}
+
+// Ações do formulário (botão)
+.form-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+
+  // Ajusta o botão para não ocupar 100%
+  .auth-button {
+    width: auto;
+    min-width: 150px;
+    padding: 0 2rem;
+  }
+}

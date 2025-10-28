@@ -1,0 +1,53 @@
+// Estilos para o grupo de select
+.select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem; // Espaçamento similar ao AuthInput
+}
+
+// Estilo do label
+.select-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+// Estilos do select, baseados no .auth-input-field
+.select-field {
+  height: 48px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+
+  // Remove a aparência padrão
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  // Adiciona um ícone de seta
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27292.4%27%20height%3D%27292.4%27%3E%3Cpath%20fill%3D%27%23a0a0a0%27%20d%3D%27M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-13%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2013l128%20128c3.6%203.6%207.8%205.4%2013%205.4s9.4-1.8%2013-5.4l128-128c3.6-3.6%205.4-7.8%205.4-13%200-5-1.8-9.4-5.4-13z%27%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.65em auto;
+
+  &::placeholder {
+    color: var(--muted-foreground);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(249, 168, 37, 0.3);
+  }
+
+  option {
+    background-color: var(--background-secondary);
+    color: var(--foreground);
+  }
+}

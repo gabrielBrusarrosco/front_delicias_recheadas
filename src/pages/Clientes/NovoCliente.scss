@@ -1,0 +1,21 @@
+// Importa os estilos de formulário genéricos
+@import "../../styles/Forms.scss";
+
+// Se precisar de estilos específicos para esta página, adicione aqui.
+.novo-cliente-page {
+  // O AuthInput não tem um 'label' por padrão,
+  // então vamos adicionar um aqui
+  .auth-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  // Cria um label para o AuthInput
+  .auth-input-wrapper::before {
+    content: attr(data-label); // Pega o label do data-label
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+  }
+}
