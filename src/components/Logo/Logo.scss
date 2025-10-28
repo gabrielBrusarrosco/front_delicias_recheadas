@@ -1,0 +1,40 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 4rem;
+
+  .logo-icon-wrapper {
+    width: 48px;
+    height: 48px;
+
+    background: linear-gradient(
+      to bottom right,
+      var(--primary),
+      var(--primary-houver)
+    );
+
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .logo-initials {
+      color: var(--foreground);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+
+  .logo-text {
+    color: var(--foreground);
+    font-size: 1.875rem;
+    letter-spacing: -0.5px;
+    .logo-text-highlight {
+      color: var(--primary);
+      font-weight: 500;
+    }
+  }
+}
