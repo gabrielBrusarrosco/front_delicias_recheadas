@@ -1,0 +1,35 @@
+// Importa os estilos de formulário genéricos
+@import "../../styles/Forms.scss";
+
+.novo-produto-page {
+  // Adiciona o label para o AuthInput
+  .auth-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  // Cria um label para o AuthInput
+  .auth-input-wrapper::before {
+    content: attr(data-label); // Pega o label do data-label
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+  }
+
+  // Estilo específico para o input de arquivo
+  .auth-input-field[type="file"] {
+    padding-top: 12px;
+    cursor: pointer;
+  }
+  
+  .auth-input-field[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+    display: none;
+  }
+  
+  .auth-input-field[type="file"]::before {
+    content: 'Clique para selecionar uma imagem';
+    cursor: pointer;
+  }
+}
